@@ -1,0 +1,13 @@
+{
+  "name": "mezopay",
+  "version": "1.0.0",
+  "description": "MUSD Payment Infrastructure for Mezo — run frontend + backend together",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names \"API,APP\" --prefix-colors \"yellow,cyan\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
